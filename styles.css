@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    transition: all 0.2s linear;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-color: #b6d3b6;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    /* align-items: center; */
+}
+
+.panel{
+    height: 80%;
+    width: 70%;
+    background-color: #f7f8f9;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.panel-Header{
+    height: 80px;
+    width: 100%;
+    background-color: #184824;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #f7f8f9;
+    gap: 7%;
+}
+
+.panel_Header_element{
+    padding: 10px;
+    display: flex;   
+    align-items: center;  
+    gap: 8px;
+    /* border: 2px solid tomato; */
+}
+
+.box{
+    padding: 3px 6px;
+    background-color: #f7f8f9;
+    border-radius: 5px;
+    color: #1a451a;
+}
+
+.panel-main{
+    height: calc(100% - 80px);  
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.bubble{
+    height: 3em;
+    width: 3em;
+    background-color: #275127;
+    border-radius: 50%;
+    color: #f7f8f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble:hover{
+    cursor: pointer;
+    background-color: #153a15;
+}
+
+.message{
+    background-color: #b6d3b6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    /* border: 2px solid black; */
+}
+
+.message p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    width: 80%;
+    text-align: center;
+}
+
+.message .btn{
+    font-size: 1rem;
+    background-color: #275127;
+    color: #f7f8f9;
+    border: none; outline: none;
+    padding: 0.3rem 1rem;
+    margin-left: 0.8rem;
+}
+
+.message #btn2{
+    display: none;
+}
+
+.message .btn.remove{
+    display: none;
+}
+
+.message #btn2.active{
+    display: inline-block;
+}
+
+.message .btn:hover{
+    cursor: pointer;
+    background-color: #153a15;
+    transform: scaleX(1.2) scaleY(1.1);
+
+}
+
+/* media querries */
+@media (max-width:760px) {
+    .panel-Header{
+        gap: 4%;
+    }
+}
+
+@media (max-width:680px) {
+    .panel_Header_element h4{
+        font-size: 0.8rem;
+    }
+
+    .box{
+        padding: 2px 4px;
+    }
+}   
+
+@media (max-width:575px) {
+    .message p{
+        font-size: 1.2rem;
+    }
+}
